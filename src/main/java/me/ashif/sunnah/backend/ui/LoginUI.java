@@ -1,6 +1,8 @@
 package me.ashif.sunnah.backend.ui;
 
 import com.vaadin.annotations.Theme;
+import com.vaadin.navigator.View;
+import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.spring.annotation.SpringUI;
 import com.vaadin.ui.*;
@@ -18,7 +20,7 @@ import static me.ashif.sunnah.backend.consts.Constants.USERNAME_CAPTION;
 
 @Theme("valo")
 @SpringUI
-public class LoginUI extends UI {
+public class LoginUI extends UI implements View {
     private VerticalLayout mRootLayout;
 
     @Override
@@ -45,6 +47,7 @@ public class LoginUI extends UI {
 
         Panel loginPanel = new Panel("Authenticate ");
         loginPanel.setWidth("30%");
+
 
         TextField username = new TextField();
         username.setCaption(USERNAME_CAPTION);
@@ -73,4 +76,8 @@ public class LoginUI extends UI {
         mRootLayout.addComponent(new Label(Constants.FOOTER_TEXT));
     }
 
+    @Override
+    public void enter(ViewChangeListener.ViewChangeEvent viewChangeEvent) {
+
+    }
 }
