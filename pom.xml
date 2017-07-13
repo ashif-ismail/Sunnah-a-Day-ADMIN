@@ -25,11 +25,20 @@
 		<vaadin.version>8.0.6</vaadin.version>
 	</properties>
 
+
+
 	<dependencies>
 		<!--<dependency>-->
 			<!--<groupId>org.springframework.boot</groupId>-->
 			<!--<artifactId>spring-boot-starter-data-jpa</artifactId>-->
 		<!--</dependency>-->
+
+		<dependency>
+			<groupId>com.github.appreciated</groupId>
+			<artifactId>material</artifactId>
+			<version>0.8.6</version>
+		</dependency>
+
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-spring-boot-starter</artifactId>
@@ -72,6 +81,11 @@
 			</plugin>
 		</plugins>
 	</build>
-
+<repositories>
+	<repository>
+		<id>vaadin-addons</id>
+		<url>http://maven.vaadin.com/vaadin-addons</url>
+	</repository>
+</repositories>
 
 </project>
