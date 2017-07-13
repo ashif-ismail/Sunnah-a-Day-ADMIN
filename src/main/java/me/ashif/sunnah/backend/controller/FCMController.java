@@ -4,7 +4,6 @@ import me.ashif.sunnah.backend.service.AndroidFCMService;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,11 +23,9 @@ import java.util.concurrent.ExecutionException;
 public class FCMController {
     @Autowired
     private AndroidFCMService mAndroidFCMService;
+    private final static String mFirebaseTopic = "generic";
 
-    @Value("${FIREBASE_TOPIC_NAME}")
-    private static String mFirebaseTopic;
-
-    @RequestMapping(value = "/send", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/send", method = RequestMethod.POST, produces = "application/json")
     public ResponseEntity<String> send(@RequestParam("title") String title,
                                        @RequestParam("body") String desc) throws JSONException{
         JSONObject body = new JSONObject();

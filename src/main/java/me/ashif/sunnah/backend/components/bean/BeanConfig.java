@@ -19,14 +19,4 @@ public class BeanConfig {
     public org.springframework.web.client.RestTemplate restTemplate(RestTemplateBuilder builder){
         return builder.build();
     }
-
-    @Bean
-    public List<ClientRequestInterceptor> clientRequestInterceptorList(){
-        return new ArrayList<>();
-    }
-
-    @Bean
-    public RequestInterceptor requestInterceptor(String headerName,String headerValue){
-        return new RequestInterceptor(headerName,headerValue);
-    }
 }
