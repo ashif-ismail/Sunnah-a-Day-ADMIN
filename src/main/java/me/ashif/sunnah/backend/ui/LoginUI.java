@@ -52,6 +52,12 @@ public class LoginUI extends UI {
         PasswordField passwordField = new PasswordField();
         passwordField.setCaption(PASSWORD_CAPTION);
         Button loginButton = new Button(SIGNIN_CAPTION);
+        loginButton.addClickListener(new Button.ClickListener() {
+            @Override
+            public void buttonClick(Button.ClickEvent clickEvent) {
+                getUI().getPage().setLocation("http://www.ashif.me");
+            }
+        });
         loginButton.addStyleName(ValoTheme.BUTTON_PRIMARY);
 
         loginLayout.addComponent(username);
