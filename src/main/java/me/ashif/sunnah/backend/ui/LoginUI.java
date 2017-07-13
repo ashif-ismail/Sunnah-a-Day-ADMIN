@@ -1,13 +1,11 @@
 package me.ashif.sunnah.backend.ui;
 
-import com.github.appreciated.material.MaterialTheme;
+import com.vaadin.annotations.Theme;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.spring.annotation.SpringUI;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
 import me.ashif.sunnah.backend.consts.Constants;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.servlet.tags.HtmlEscapingAwareTag;
 
 import static me.ashif.sunnah.backend.consts.Constants.PASSWORD_CAPTION;
 import static me.ashif.sunnah.backend.consts.Constants.SIGNIN_CAPTION;
@@ -18,6 +16,7 @@ import static me.ashif.sunnah.backend.consts.Constants.USERNAME_CAPTION;
  * github.com/SheikhZayed
  */
 
+@Theme("valo")
 @SpringUI
 public class LoginUI extends UI {
     private VerticalLayout mRootLayout;
@@ -44,7 +43,7 @@ public class LoginUI extends UI {
         mRootLayout.addComponent(header);
         mRootLayout.setSpacing(true);
 
-        Panel loginPanel = new Panel();
+        Panel loginPanel = new Panel("Authenticate ");
         loginPanel.setWidth("30%");
 
         TextField username = new TextField();
