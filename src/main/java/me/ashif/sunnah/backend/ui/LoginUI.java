@@ -5,9 +5,11 @@ import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.spring.annotation.SpringUI;
+import com.vaadin.spring.annotation.SpringView;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
 import me.ashif.sunnah.backend.consts.Constants;
+import sun.rmi.runtime.Log;
 
 import static me.ashif.sunnah.backend.consts.Constants.PASSWORD_CAPTION;
 import static me.ashif.sunnah.backend.consts.Constants.SIGNIN_CAPTION;
@@ -19,9 +21,11 @@ import static me.ashif.sunnah.backend.consts.Constants.USERNAME_CAPTION;
  */
 
 @Theme("valo")
-@SpringUI
+@SpringUI(path = "/login")
+@SpringView(name = LoginUI.VIEW_NAME)
 public class LoginUI extends UI implements View {
     private VerticalLayout mRootLayout;
+    public static final String VIEW_NAME = "login";
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {
@@ -54,12 +58,7 @@ public class LoginUI extends UI implements View {
         PasswordField passwordField = new PasswordField();
         passwordField.setCaption(PASSWORD_CAPTION);
         Button loginButton = new Button(SIGNIN_CAPTION);
-        loginButton.addClickListener(new Button.ClickListener() {
-            @Override
-            public void buttonClick(Button.ClickEvent clickEvent) {
-                getUI().getPage().setLocation("http://www.ashif.me");
-            }
-        });
+        loginButton.addClickListener((e)  -> getUI().getPage().setLocation("http://www.ashif.me"));
         loginButton.addStyleName(ValoTheme.BUTTON_PRIMARY);
 
         loginLayout.addComponent(username);
