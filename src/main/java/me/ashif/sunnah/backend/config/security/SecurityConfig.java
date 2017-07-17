@@ -18,14 +18,12 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	private final UserDetailsService userDetailsService;
-
 	private final PasswordEncoder passwordEncoder;
-
-	private final RedirectAuthenticationSuccessHandler successHandler;
+	private final AuthSuccessHandler successHandler;
 
 	@Autowired
 	public SecurityConfig(UserDetailsService userDetailsService, PasswordEncoder passwordEncoder,
-			RedirectAuthenticationSuccessHandler successHandler) {
+						  AuthSuccessHandler successHandler) {
 		this.userDetailsService = userDetailsService;
 		this.passwordEncoder = passwordEncoder;
 		this.successHandler = successHandler;

@@ -20,14 +20,14 @@ import java.io.IOException;
  */
 @SpringComponent
 @ApplicationScope
-public class RedirectAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
+public class AuthSuccessHandler implements AuthenticationSuccessHandler {
 
 	private final String location;
 
 	@Autowired
 	private ServletContext servletContext;
 
-	public RedirectAuthenticationSuccessHandler() {
+	public AuthSuccessHandler() {
 		location = Constants.APP_URL;
 	}
 
@@ -45,7 +45,6 @@ public class RedirectAuthenticationSuccessHandler implements AuthenticationSucce
 	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
 			Authentication authentication) throws IOException, ServletException {
 		response.sendRedirect(getAbsoluteUrl(location));
-
 	}
 
 }
