@@ -1,4 +1,4 @@
-package me.ashif.sunnah.backend.components.model;
+package me.ashif.sunnah.backend.model;
 
 import org.hibernate.validator.constraints.NotEmpty;
 

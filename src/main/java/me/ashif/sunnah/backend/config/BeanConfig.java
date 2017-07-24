@@ -1,15 +1,10 @@
-package me.ashif.sunnah.backend.components.bean;
+package me.ashif.sunnah.backend.config;
 
-import me.ashif.sunnah.backend.network.RequestInterceptor;
-import org.omg.PortableInterceptor.ClientRequestInterceptor;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Ashif on 12/7/17.

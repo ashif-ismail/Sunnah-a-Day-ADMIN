@@ -1,6 +1,6 @@
-package me.ashif.sunnah.backend.config.security;
+package me.ashif.sunnah.backend.security;
 
-import me.ashif.sunnah.backend.components.model.Role;
+import me.ashif.sunnah.backend.model.Role;
 import me.ashif.sunnah.backend.consts.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;

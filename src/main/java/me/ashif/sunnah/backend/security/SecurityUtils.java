@@ -1,4 +1,4 @@
-package me.ashif.sunnah.backend.config.security;
+package me.ashif.sunnah.backend.security;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContext;

@@ -1,4 +1,4 @@
-package me.ashif.sunnah.backend.config.security;
+package me.ashif.sunnah.backend.security;
 
 import com.vaadin.spring.annotation.SpringComponent;
 import me.ashif.sunnah.backend.consts.Constants;

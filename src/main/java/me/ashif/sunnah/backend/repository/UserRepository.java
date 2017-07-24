@@ -1,6 +1,6 @@
 package me.ashif.sunnah.backend.repository;
 
-import me.ashif.sunnah.backend.components.model.User;
+import me.ashif.sunnah.backend.model.User;
 import org.springframework.data.repository.CrudRepository;
 
 /**

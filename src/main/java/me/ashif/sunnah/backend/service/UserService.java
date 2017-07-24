@@ -1,6 +1,6 @@
 package me.ashif.sunnah.backend.service;
 
-import me.ashif.sunnah.backend.components.model.User;
+import me.ashif.sunnah.backend.model.User;
 import me.ashif.sunnah.backend.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

@@ -5,7 +5,7 @@
 //$v-font-weight: 300;
 //$v-font-family: "Open Sans", sans-serif;
 
-// Defines the border used by all components.
+// Defines the border used by all config.
 //$v-border: 1px solid (v-shade 0.7);
 //$v-border-radius: 4px;
 
@@ -14,7 +14,7 @@
 // Affects the color of content areas, e.g  Panel and Window content, TextField input etc
 //$v-app-background-color: $v-background-color;
 
-// Affects the visual appearance of all components
+// Affects the visual appearance of all config
 //$v-gradient: v-linear 8%;
 //$v-bevel-depth: 30%;
 //$v-shadow-opacity: 5%;
@@ -49,7 +49,7 @@ $app-background-image: url('bg.jpg');
 
   .v-errorindicator {
     // Only show validation errors using field styles
-    display: none; 
+    display: none;
   }
   .Vaadin-Icons {
     // Make Vaadin Icons behave exactly like FontAwesome

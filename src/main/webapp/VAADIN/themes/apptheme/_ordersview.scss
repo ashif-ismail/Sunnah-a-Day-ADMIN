@@ -58,7 +58,7 @@
         border-bottom: 0;
         margin-bottom: 0;
     }
-  
+
     .history .v-caption {
       padding-bottom: 0;
       .v-captiontext,
@@ -69,7 +69,7 @@
       }
     }
 
-    // Make components completely invisible in read-only mode
+    // Make config completely invisible in read-only mode
     .v-textfield.v-readonly {
       // Hide placeholder in readonly fields
       &::placeholder {
