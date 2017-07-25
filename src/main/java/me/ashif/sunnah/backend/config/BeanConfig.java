@@ -1,5 +1,6 @@
 package me.ashif.sunnah.backend.config;
 
+import com.vaadin.spring.access.SecuredViewAccessControl;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,5 +21,11 @@ public class BeanConfig {
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    SecuredViewAccessControl securedViewAccessControl()
+    {
+        return new SecuredViewAccessControl();
     }
 }
