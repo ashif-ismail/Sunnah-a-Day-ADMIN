@@ -22,8 +22,6 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
-/src/main/resources/application.properties
 src/main/resources/static/
 src/main/resources/templates/
 src/main/webapp/VAADIN/themes/valo/
-!/src/main/resources/application.properties
